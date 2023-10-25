@@ -1,3 +1,6 @@
 Silverstripe\CMS\Model\SiteTree:
   extensions:
-    - InnisMaggiore\SilverstripeSocialMetaTags\SocialMetaTagsExtension
+    - PurpleSpider\BasicSocialSharing\BasicSocialSharingExtension
+PurpleSpider\BasicSocialSharing:
+  default_title: "Title"
+  default_description: "Content"
