@@ -67,7 +67,7 @@ class BasicSocialSharingExtension extends DataExtension {
     function findSocialTitleText($forPlaceholder = false) {
         $owner = $this->getOwner();
         $className = $owner->ClassName;
-        $configClass = "InnisMaggiore\\SocialMetaTags";
+        $configClass = "PurpleSpider\\BasicSocialSharing";
 
         $titlesConfig = Config::inst()->get($configClass, 'titles') ?: array();
         $defaultTitle = Config::inst()->get($configClass, 'default_title') ?: "Title";
@@ -101,7 +101,7 @@ class BasicSocialSharingExtension extends DataExtension {
     {
         $owner = $this->getOwner();
         $className = $owner->ClassName;
-        $configClass = "InnisMaggiore\\SocialMetaTags";
+        $configClass = "PurpleSpider\\BasicSocialSharing";
         $defaultDescription = Config::inst()->get($configClass, 'default_description') ?: "MetaDescription";
         $descriptionsConfig = Config::inst()->get($configClass,'descriptions') ?: array();        
 
@@ -132,7 +132,7 @@ class BasicSocialSharingExtension extends DataExtension {
     function findSocialMetaImage() {
         $owner = $this->getOwner();
         $className = $owner->ClassName;
-        $configClass = "InnisMaggiore\\SocialMetaTags";
+        $configClass = "PurpleSpider\\BasicSocialSharing";
         $imagesConfig = Config::inst()->get($configClass, 'images') ?: array();
 
         
@@ -167,7 +167,7 @@ class BasicSocialSharingExtension extends DataExtension {
             $ogType = "website";
 
             // get specified fields
-            $configClass = "InnisMaggiore\\SocialMetaTags";
+            $configClass = "PurpleSpider\\BasicSocialSharing";
             $twitterSite = Config::inst()->get($configClass, 'twitter_site');
 
             // get customized fields
