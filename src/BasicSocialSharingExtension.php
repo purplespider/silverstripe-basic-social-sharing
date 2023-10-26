@@ -123,7 +123,7 @@ class BasicSocialSharingExtension extends DataExtension {
         // 4. Return value from default description (e.g. Content), if set in YML
         } else if ($defaultDescription != "" && isset($owner->$defaultDescription) && $owner->$defaultDescription != "") {
             if($defaultDescription == 'Content') {
-                return Convert::raw2att(strip_tags($owner->obj('Content')->LimitCharacters(250,'...')));
+                return strip_tags($owner->obj('Content')->LimitCharacters(250,'...'));
             }
             return Convert::raw2att($owner->$defaultDescription);
         }
