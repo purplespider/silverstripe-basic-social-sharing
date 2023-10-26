@@ -104,6 +104,17 @@ PurpleSpider\BasicSocialSharing:
     PurpleSpider\Models\Recipe: 'article'
   twitter_site: ''
 ```
+
+## Silverstripe Blog Module Support
+Add the following to a `config.yml`:
+```yml
+PurpleSpider\BasicSocialSharing:
+  images:
+    SilverStripe\Blog\Model\BlogPost: "FeaturedImage"
+  types:
+    SilverStripe\Blog\Model\BlogPost: "article"
+```
+
 ## Adding social media meta tags to DataObjects
 By default, this module will only add social media meta tags to SiteTree objects.
 
