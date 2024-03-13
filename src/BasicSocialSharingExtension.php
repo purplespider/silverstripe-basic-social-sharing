@@ -178,7 +178,11 @@ class BasicSocialSharingExtension extends DataExtension {
             $titleText = $this->findSocialTitleText();
 
             if($this->findSocialMetaImage() && $this->findSocialMetaImage()->exists()) {
-                $imageLink = $this->findSocialMetaImage()->AbsoluteLink();
+                if (class_exists('JonoM\FocusPoint\Forms\FocusPointField')) {
+                    $imageLink = $this->findSocialMetaImage()->FocusFill(1200,630)->AbsoluteLink();
+                } else {
+                    $imageLink = $this->findSocialMetaImage()->Fill(1200,630)->AbsoluteLink();
+                }
             } else {
                 $imageLink = false;
             }
