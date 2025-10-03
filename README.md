@@ -31,7 +31,7 @@ Supported social media meta tags include:
   * `twitter:card`
 
 ## Requirements
-SilverStripe 4.2+
+SilverStripe 6
 
 
 ## Installation
