@@ -40,7 +40,7 @@ class BasicSocialSharingExtension extends Extension {
         'ignoreFields' => ['SocialMetaTitle', 'SocialMetaDescription', 'SocialMetaImage'],
     ];
 
-    public function updateCMSFields(FieldList $fields) {
+    protected function updateCMSFields(FieldList $fields) {
         $owner = $this->getOwner();
 
         if (is_subclass_of($owner, SiteTree::class) && !is_a($owner, RedirectorPage::class) && !is_a($owner, ErrorPage::class)) {
@@ -163,7 +163,7 @@ class BasicSocialSharingExtension extends Extension {
         return false;
     }
 
-    public function MetaTags(&$tags) {
+    protected function updateMetaTags(&$tags) {
         $owner = $this->getOwner();
         $className = $owner->ClassName;
 
